@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NewLandActivity">
+
+
+
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="#F4F4F4"
+                android:layout_height="230dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/photo"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    app:cardCornerRadius="5dp"
+                    android:id="@+id/addImage"
+                    app:cardElevation="-1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_height="80dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/baseline_add_242"
+                            android:layout_gravity="center"
+                            android:layout_height="20dp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="Add Photo"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right"
+
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="200dp"
+                    android:id="@+id/areax"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:textColor="#444444"
+                    android:layout_height="45dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="110dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="#3C88B5"
+
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Measure land"
+                        android:id="@+id/calculate"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Tax Payer's RIN or NIN"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:background="#F4F4F4"
+                        android:id="@+id/tax_payers_nin"
+                        android:hint="Enter Tax Payer's RIN or NIN"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Size"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/land_size"
+                        android:hint="Select Land Size"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Purpose"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/land_purpose"
+                        android:hint="Select Land Purpose"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Function"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/landFunction"
+                        android:hint="Select Land Function"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Type"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/landType"
+                        android:hint="Select Type"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Ownership"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/landOwnership"
+                        android:hint="Select Land Ownership"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="LGA"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:hint="Select Lga"
+                        android:id="@+id/lga"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Zone"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/ward"
+                        android:hint="Select Zone"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Location"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#000000"
+                        android:elevation="100dp"
+                        android:visibility="visible"
+                        android:id="@+id/loadLocation"
+                        android:alpha="0"/>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/area"
+                        android:hint="Select Location"
+                        android:layout_height="50dp"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Street"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:background="#F4F4F4"
+                        android:id="@+id/street"
+                        android:hint="Enter Street"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Address"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:focusable="false"
+                        android:background="#f4f4f4"
+                        android:id="@+id/landAddress"
+                        android:hint="Enter Land Address"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Class"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+
+                        android:id="@+id/landClass"
+                        android:hint="Select Land Class"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Beacon Number"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:background="#F4F4F4"
+                        android:id="@+id/beaconNumber"
+                        android:hint="Enter Beacon Number"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Plot Number"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:background="#F4F4F4"
+                        android:id="@+id/plotNumber"
+                        android:hint="Enter Plot Number"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Longitude"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:background="#F4F4F4"
+                        android:id="@+id/landLongitude"
+                        android:hint="Enter Land Longitude"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Land Latitude"
+                        android:layout_height="wrap_content"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="4dp"
+                        app:cardElevation="-1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        app:cardCornerRadius="2dp"
+                        android:alpha="0.9"
+                        app:cardBackgroundColor="#ff0000"
+                        android:layout_height="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:background="#F4F4F4"
+                        android:id="@+id/landLatitude"
+                        android:hint="Enter Land Latitude"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </ScrollView>
+
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/topBar"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:id="@+id/back"
+            app:cardBackgroundColor="#3C88B5"
+            android:layout_height="40dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/round_arrow_back_24"
+                android:padding="10dp"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ADD LAND"
+            android:textSize="15dp"
+            android:layout_height="55dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="#3C88B5"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Done"
+                android:id="@+id/done"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#00000000"
+        android:id="@+id/loadingLayout"
+       android:visibility="gone"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:alpha="0.8"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="Saving"
+            android:layout_marginTop="40dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/completeCard"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#00000000">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:background="#000000" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#EDEDED"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/round_verified_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Success"
+                        android:textSize="18dp"
+                        android:textColor="#444444"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ok"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:height="20dp"
+                        android:gravity="center"
+                        android:text="Ok"
+                        android:textColor="#444444" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#00000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/myModal">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:alpha="0.7"
+            android:layout_height="match_parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="395dp"
+            android:layout_marginBottom="-10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#F3F3F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            android:layout_gravity="bottom"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+
+
+
+            <ScrollView
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/taxPayersRecycler"
+                        android:visibility="gone"
+                        android:layout_marginTop="40dp"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center"
+                        android:id="@+id/taxPayersListLoader"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="100dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:text="Loading Tax Payers"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="100dp"
+                        android:id="@+id/noTaxPayer"
+                        android:visibility="gone"
+                        android:text="No tax payer registered"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/createNewLayout"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#222222"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Tax Payer's Name"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:background="#F4F4F4"
+                                    android:id="@+id/modal_tax_payers_name"
+                                    android:hint="Enter Tax Payer's Name"
+                                    android:layout_height="50dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#222222"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Tax Payer's RIN/NIN"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="4dp"
+                                    app:cardElevation="-1dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="8dp"
+                                    app:cardCornerRadius="2dp"
+                                    android:alpha="0.9"
+                                    app:cardBackgroundColor="#ff0000"
+                                    android:layout_height="4dp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:inputType="number"
+                                    android:digits="0123456789"
+                                    android:background="#F4F4F4"
+                                    android:id="@+id/modal_tax_payers_rin"
+                                    android:hint="Enter Tax Payer's RIN/NIN"
+                                    android:layout_height="50dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#222222"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Tax Payer's Email Address"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:id="@+id/modalEmailAddress"
+                                    android:background="#F4F4F4"
+                                    android:hint="Enter Tax Payer's Email Address"
+                                    android:layout_height="50dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#222222"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Phone Number"
+                                    android:layout_height="wrap_content"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:id="@+id/modalPhoneNumber"
+                                    android:background="#F4F4F4"
+                                    android:hint="Enter Phone Number"
+                                    android:layout_height="50dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#222222"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Tax Payer's Contact Address"
+                                    android:layout_height="wrap_content"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="2dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:background="#F4F4F4"
+                                    android:id="@+id/modal_tax_payers_contact_address"
+                                    android:hint="Enter Tax Payer'Contact Address"
+                                    android:layout_height="50dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </ScrollView>
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="60dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/modalBack"
+                    app:cardBackgroundColor="#3C88B5"
+                    android:layout_height="40dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/round_arrow_back_24"
+                        android:padding="10dp"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TAX PAYER'S INFO"
+                    android:textSize="15dp"
+                    android:id="@+id/topText"
+                    android:visibility="gone"
+                    android:layout_height="55dp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:gravity="center"
+                    android:id="@+id/searchBox"
+                    android:hint="Search Tax Payer"
+                    android:textSize="15dp"
+                    android:layout_height="55dp"/>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="#3C88B5"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Submit"
+                        android:visibility="gone"
+                        android:id="@+id/modalDone"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Add New"
+                        android:id="@+id/modalCreate"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="#00000000"
+                android:id="@+id/modalLoadingLayout"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="match_parent"
+                    android:background="#000000"
+                    android:alpha="0.8"
+                    android:layout_height="match_parent"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:text="Saving"
+                    android:layout_marginTop="40dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:cardBackgroundColor="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/myModal2">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:alpha="0.7"
+            android:layout_height="match_parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="395dp"
+            android:layout_marginBottom="-10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#F3F3F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            android:layout_gravity="bottom"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/addressesRecycler"
+                android:layout_marginTop="100dp"
+                android:layout_height="match_parent"/>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="60dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/modalBack2"
+                    app:cardBackgroundColor="#3C88B5"
+                    android:layout_height="40dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/round_arrow_back_24"
+                        android:padding="10dp"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/modalAddress"
+                    android:hint="Type Address"
+                    android:textSize="15dp"
+                    android:layout_height="55dp"/>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#3C88B5"
+                    android:layout_height="40dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/round_arrow_back_24"
+                        android:text="Search"
+                        android:id="@+id/modalGo"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/loadingAddress"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:text="Searching"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

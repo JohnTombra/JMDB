@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="160dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="70dp"
+                android:scaleType="centerCrop"
+                android:src="#3C88B5"
+                android:id="@+id/image"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:paddingLeft="10dp"
+                android:gravity="center|left"
+                android:layout_marginLeft="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center|left"
+
+                    android:layout_marginTop="0dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_access_time_filled_24"
+                        android:layout_height="12dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="5dp"
+                        tools:text="10/12/2023"
+                        android:id="@+id/time"
+                        android:textSize="12dp"
+                        android:textColor="#3C88B5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:maxLines="1"
+                    tools:text="40 x 40"
+                    android:id="@+id/landSize"
+                    android:ellipsize="end"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="0dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="2dp"
+                        android:background="#3C88B5"
+                        android:layout_height="55dp"/>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="match_parent">
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_location_searching_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="LGA"
+                                android:id="@+id/lga"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_category_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="Ward"
+                                android:id="@+id/ward"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="12dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_photo_size_select_small_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="Area"
+                                android:id="@+id/area"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center|left"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:src="@drawable/baseline_location_on_24"
+                        android:layout_height="12dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="10dp"
+                        tools:text="Land Address"
+                        android:textSize="12dp"
+                        android:id="@+id/address"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

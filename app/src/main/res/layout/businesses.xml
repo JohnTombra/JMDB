@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp"
+        android:layout_width="130dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_height="170dp">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="50dp"
+                android:layout_margin="3dp"
+                app:cardElevation="-1dp"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="#EFEFEF"
+                    android:id="@+id/image"
+                    android:layout_height="100dp"/>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardBackgroundColor="#4CAF50"
+                    android:id="@+id/addImage"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/baseline_add_242"
+                            android:layout_gravity="center"
+                            android:layout_height="20dp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginTop="5dp"
+                            android:text="Add Photo"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                tools:text="Bungalow"
+                android:id="@+id/buildingType"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:textSize="14.5dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:gravity="center|left"
+                android:layout_marginLeft="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center|left"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_access_time_filled_24"
+                        android:layout_height="12dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="5dp"
+                        tools:text="10/12/2023"
+                        android:id="@+id/time"
+                        android:textSize="12dp"
+                        android:textColor="#3C88B5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="2dp"
+                        android:background="#3C88B5"
+                        android:layout_height="55dp"/>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="match_parent">
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_local_phone_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:id="@+id/phoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="08133322255"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_category_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:id="@+id/buildingCategory"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="Medium sized building"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="12dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center|left"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:src="@drawable/baseline_photo_size_select_small_24"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:id="@+id/buildingSize"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="10dp"
+                                tools:text="40 X 40"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center|left"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                       android:src="@drawable/baseline_location_on_24"
+                        android:layout_height="12dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:maxLines="1"
+
+                        android:ellipsize="end"
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="10dp"
+                        tools:text="Building Address"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
