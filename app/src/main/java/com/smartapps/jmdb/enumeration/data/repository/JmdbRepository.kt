@@ -76,7 +76,7 @@ import java.util.concurrent.TimeUnit
 
 
 
-object JmdbRepository {
+object JmdbRepository {//hah
 
 
         var BLOCK_SYNC = false
