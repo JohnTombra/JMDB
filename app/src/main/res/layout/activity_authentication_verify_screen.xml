@@ -41,32 +41,47 @@
 
                 <ImageView
                     android:layout_width="65dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="40dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/jmdb"
+                    android:src="@drawable/jmdb"
                     android:layout_marginBottom="3dp"
                     android:layout_height="65dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:textStyle="bold"
                     android:textSize="21dp"
                     android:textColor="#444444"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:gravity="center"
                     android:text="JMDB"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"/>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:textSize="11.5dp"
+                    android:textSize="10dp"
+                    android:textColor="#444444"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="PLATEAU STATE OF NIGERIA"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="10dp"
                     android:textColor="#444444"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginRight="10dp"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:text="Jos Metropolitan Development Board"
                     android:layout_height="wrap_content"/>
 
@@ -109,10 +124,10 @@
                         android:id="@+id/userName"
                         android:background="#F4F4F4"
                         android:inputType="textEmailAddress"
-                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="8dp"
                         android:textSize="14.5dp"
                         android:layout_gravity="left"
-                        android:hint="User name"
+                        android:hint="Username"
                         />
                     </androidx.cardview.widget.CardView>
 
@@ -147,7 +162,7 @@
                         android:layout_height="50dp"
                         android:id="@+id/password"
                         android:background="#F4F4F4"
-                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="8dp"
                         android:inputType="textPassword"
                         android:textSize="14.5dp"
                         android:layout_gravity="left"
@@ -163,9 +178,9 @@
                     android:layout_marginTop="12dp"
                     android:id="@+id/show"
                     android:layout_gravity="right"
+                    android:textStyle="bold"
                     android:layout_marginRight="27dp"
                     android:text="Show password"
-                    android:textStyle="italic"
                     android:layout_height="wrap_content"/>
 
 
@@ -198,7 +213,7 @@
                             android:layout_height="50dp"
                             android:id="@+id/tin"
                             android:background="#F4F4F4"
-                            android:layout_marginLeft="8dp"
+                            android:paddingLeft="8dp"
                             android:textSize="14.5dp"
                             android:layout_gravity="left"
                             android:hint="Taxpayer Identification Number (TIN)"
@@ -236,7 +251,7 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginTop="40dp"
                     android:layout_weight="1"
                     android:layout_marginBottom="10dp"
                     app:layout_constraintRight_toRightOf="parent"
@@ -328,8 +343,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:id="@+id/loadingScreen"
-        android:visibility="gone"
+
         app:cardBackgroundColor="#00000000"
+        android:visibility="gone"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -342,13 +358,32 @@
                 android:background="#000000"
                 android:alpha="0.5"/>
 
-            <ProgressBar
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_height="wrap_content"/>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/progressText"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#eeeeee"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

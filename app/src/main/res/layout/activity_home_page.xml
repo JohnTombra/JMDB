@@ -7,19 +7,72 @@
     android:background="#FBFBFB"
     tools:context=".ui.HomePageActivity">
 
-
+<!--
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        app:cardElevation="5dp"
+        app:cardElevation="1dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="80dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/jmdb"
-            android:layout_height="40dp"/>
+        android:layout_height="100dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:alpha="0.6"
+                    android:layout_width="30dp"
+                    android:src="@drawable/jmdb"
+                    android:layout_height="30dp"/>
+
+                <ImageView
+                    android:alpha="0.6"
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/jmdb"
+                    android:layout_height="50dp"/>
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:alpha="0.6"
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/jmdb"
+                    android:layout_height="30dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="7sp"
+                android:alpha="0.6"
+
+                android:layout_marginTop="5dp"
+                android:text="PLATEAU STATE OF NIGERIA"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="7sp"
+                android:alpha="0.6"
+                android:text="Jos Metropolitan Development Board"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -28,8 +81,9 @@
             android:textStyle="bold"
             android:textColor="#797979"
             android:background="#ffffff"
+            android:visibility="gone"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="54dp"
+            android:layout_marginLeft="104dp"
             android:textSize="20dp"
             android:layout_height="wrap_content"/>
 
@@ -37,10 +91,11 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:text="DB"
+            android:visibility="gone"
             android:textStyle="bold"
             android:textColor="#797979"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="84dp"
+            android:layout_marginLeft="134dp"
             android:textSize="20dp"
             android:layout_height="wrap_content"/>
 
@@ -53,6 +108,114 @@
             app:cardBackgroundColor="#4CAF50"
             android:layout_marginTop="18dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="153dp"
+                android:padding="5dp"
+                android:id="@+id/neww"
+                android:text="NEW REGISTRATION"
+                android:textColor="#ffffff"
+                android:src="@drawable/baseline_cloud_sync_24"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="70dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="43dp"
+                    android:src="@drawable/jmdb"
+                    android:layout_height="43dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="JMDB"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16.5dp"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:layout_gravity="right"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="42dp"
+            android:src="@drawable/netdotnet"
+            android:layout_height="42dp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="JM"
+            android:textStyle="bold"
+            android:textColor="#797979"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="104dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="DB"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="#797979"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="134dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="right"
+            app:cardBackgroundColor="#4CAF50"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             app:cardCornerRadius="5dp"
             android:layout_height="40dp">
@@ -90,7 +253,8 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginTop="85dp"
+                android:layout_marginTop="67dp"
+                android:background="#ffffff"
                 android:layout_height="wrap_content">
 
 
@@ -101,7 +265,7 @@
                     android:id="@+id/buildings"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="17dp"
                     android:layout_marginBottom="5dp"
                     android:layout_height="150dp">
 
@@ -114,17 +278,18 @@
                         android:layout_height="wrap_content">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="70dp"
+                            android:layout_width="65dp"
                             android:alpha="0.8"
                             android:src="@drawable/greenhouse"
-                            android:layout_height="70dp"/>
+                            android:layout_height="65dp"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:text="Create Building"
+                            android:text="Enumerate Building"
                             android:id="@+id/builld"
                             android:textColor="#797979"
-                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textSize="13.5dp"
                             android:layout_height="wrap_content"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -153,7 +318,7 @@
                     app:cardCornerRadius="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="17dp"
                     android:layout_marginBottom="5dp"
                     android:layout_height="150dp">
 
@@ -168,18 +333,18 @@
 
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="55dp"
-
+                            android:layout_width="50dp"
                             android:alpha="0.8"
                             android:src="@drawable/business"
-                            android:layout_height="55dp"/>
+                            android:layout_height="50dp"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:text="View Buildings"
+                            android:text="Synchronize Buildings"
                             android:textColor="#797979"
                             android:layout_marginTop="10dp"
-                            android:textSize="16dp"
+                            android:textSize="13.5dp"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -224,33 +389,35 @@
                         android:layout_gravity="bottom|right"
                         app:cardElevation="-1dp"
                         app:cardCornerRadius="2dp"
+                        android:alpha="0.5"
                         android:layout_margin="10dp"
-                        android:alpha="0.3"
-                        app:cardBackgroundColor="#ff0000"
+                        app:cardBackgroundColor="#00ff00"
                         android:layout_height="4dp"/>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="95dp"
+                        android:layout_width="125dp"
                         android:layout_height="83dp"
+                        android:layout_marginTop="2.5dp"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:alpha="0.4"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:alpha="0.55"
                             android:src="@drawable/shop1" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Other"
+                            android:text="Registration"
                             android:layout_gravity="center"
                             android:gravity="center"
+                            android:textSize="13.5dp"
                             android:textColor="#797979"
-                            android:textSize="16dp" />
+                            android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -278,9 +445,9 @@
                         android:layout_gravity="bottom|right"
                         app:cardElevation="-1dp"
                         app:cardCornerRadius="2dp"
+                        android:alpha="0.5"
                         android:layout_margin="10dp"
-                        android:alpha="0.3"
-                        app:cardBackgroundColor="#ff0000"
+                        app:cardBackgroundColor="#00ff00"
                         android:layout_height="4dp"/>
 
 
@@ -298,20 +465,22 @@
                             android:layout_height="wrap_content">
 
                             <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="60dp"
-                                android:alpha="0.4"
-                                android:src="@drawable/delivery"
-                                android:layout_height="60dp"/>
+                                android:layout_width="48dp"
+
+                                android:alpha="0.65"
+                                android:src="@drawable/statistics"
+                                android:layout_height="48dp"/>
                         </androidx.cardview.widget.CardView>
 
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:text="Other"
+                            android:text="Tin Registration"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="#797979"
-                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textSize="13.5dp"
                             android:layout_marginTop="5dp"
                             android:layout_height="wrap_content"/>
 
@@ -347,9 +516,9 @@
                         android:layout_gravity="bottom|right"
                         app:cardElevation="-1dp"
                         app:cardCornerRadius="2dp"
+                        android:alpha="0.5"
                         android:layout_margin="10dp"
-                        android:alpha="0.3"
-                        app:cardBackgroundColor="#ff0000"
+                        app:cardBackgroundColor="#00ff00"
                         android:layout_height="4dp"/>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -361,19 +530,20 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="50dp"
-                            android:alpha="0.4"
+                            android:alpha="0.68"
                             android:src="@drawable/business"
                             android:layout_height="50dp"/>
 
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:text="Other"
+                            android:text="Statistics"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textColor="#797979"
                             android:layout_marginTop="2dp"
-                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textSize="13.5dp"
+                            android:textColor="#797979"
                             android:layout_height="wrap_content"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -402,7 +572,7 @@
                         app:cardElevation="-1dp"
                         app:cardCornerRadius="2dp"
                         android:layout_margin="10dp"
-                        android:alpha="0.3"
+                        android:alpha="0.2"
                         app:cardBackgroundColor="#ff0000"
                         android:layout_height="4dp"/>
 
@@ -416,18 +586,20 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="50dp"
-                            android:alpha="0.4"
+                            android:alpha="0.2"
                             android:src="@drawable/business"
                             android:layout_height="50dp"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:text="Other"
+                            android:text="Notes"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textColor="#797979"
+                            android:alpha="0.3"
                             android:layout_marginTop="5dp"
-                            android:textSize="16dp"
+                            android:textSize="13.5dp"
+                            android:textColor="#797979"
+                            android:textStyle="bold"
                             android:layout_height="wrap_content"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -564,13 +736,14 @@
     <androidx.cardview.widget.CardView
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        app:cardElevation="100dp"
-        android:layout_height="56dp">
+        app:cardElevation="4dp"
+        android:layout_height="62dp">
 
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:layout_marginTop="2dp"
             android:layout_height="match_parent">
 
 
@@ -590,7 +763,8 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:text="Home"
-                    android:textSize="13dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
                     android:textColor="#4CAF50"
                     android:layout_height="wrap_content"/>
 
@@ -604,20 +778,22 @@
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:id="@+id/enrollNew"
+                android:id="@+id/synchronize"
                 android:layout_height="match_parent">
 
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="22dp"
-                    android:src="@drawable/baseline_person_outline_24"
+                    android:src="@drawable/baseline_cloud_sync_24"
                     android:layout_height="22dp"/>
 
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
-                    android:text="Settings"
-                    android:textSize="13dp"
+                    android:text="Synchronize Data"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+
                     android:textColor="#797979"
                     android:layout_height="wrap_content"/>
 
@@ -646,7 +822,8 @@
                     android:layout_width="wrap_content"
                     android:text="Log out"
                     android:textColor="#797979"
-                    android:textSize="13dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"/>
 
 
@@ -657,6 +834,131 @@
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/loadingScreen"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#00000000"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:alpha="0.8"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:textColor="#CACACA"
+                    android:id="@+id/progressText"
+                    android:text="Synchronizing meta data..."
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/completeCard"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#00000000">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:background="#000000" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#EDEDED"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/round_verified_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Sync Successful"
+                        android:textSize="17dp"
+                        android:textColor="#444444"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ok"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:height="20dp"
+                        android:gravity="center"
+                        android:text="Ok"
+                        android:textColor="#444444" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.cardview.widget.CardView>

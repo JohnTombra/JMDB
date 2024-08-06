@@ -52,7 +52,8 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="50dp"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="-1dp"
+                    app:cardElevation="0.1dp"
+                    android:alpha="0.2"
                     app:cardBackgroundColor="#4CAF50"
                     android:id="@+id/addImage"
                     app:layout_constraintTop_toTopOf="parent"
@@ -155,6 +156,55 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:id="@+id/ownerTinCard"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Owner T.I.N"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:paddingLeft="15dp"
+                        android:background="#F1F1F1"
+                        android:enabled="false"
+                        android:id="@+id/ownerTin"
+                        android:hint="Enter Owner T.I.N"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -175,7 +225,57 @@
                         android:textColor="#222222"
                         android:textSize="12dp"
                         android:layout_width="wrap_content"
-                        android:text="Approval Code (Optional)"
+                        android:text="Building Tag"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:textSize="14dp"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:paddingLeft="15dp"
+                        android:background="#F1F1F1"
+                        android:enabled="false"
+                        android:id="@+id/tag"
+                        android:hint="Enter Building Tag"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:text="Approval Code"
                         android:layout_height="wrap_content"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -275,6 +375,7 @@
                 android:orientation="vertical"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
+                android:visibility="gone"
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
 
@@ -339,6 +440,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:orientation="vertical"
+                android:visibility="gone"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
@@ -404,6 +506,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:orientation="vertical"
+                android:visibility="gone"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
@@ -582,7 +685,12 @@
                         android:id="@+id/apartmentType"
                         android:layout_height="50dp"
                         />
-
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="match_parent"
+                        android:id="@+id/buildingTypeCover"
+                        android:background="#00000000"
+                        android:visibility="gone"
+                        android:layout_height="50dp"/>
                 </androidx.cardview.widget.CardView>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -726,6 +834,167 @@
 
 
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="#222222"
+                            android:textSize="12dp"
+                            android:layout_width="wrap_content"
+                            android:text="Street"
+                            android:layout_height="wrap_content"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="4dp"
+                            app:cardElevation="-1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            app:cardCornerRadius="2dp"
+                            android:alpha="0.9"
+                            app:cardBackgroundColor="#ff0000"
+                            android:layout_height="4dp"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardElevation="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/streetSelect"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="#F4F4F4"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:textSize="14dp"
+                            android:paddingLeft="15dp"
+                            android:id="@+id/street"
+                            android:layout_height="50dp"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="match_parent"
+                            android:id="@+id/streetCover"
+                            android:background="#00000000"
+                            android:visibility="gone"
+                            android:layout_height="50dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardElevation="2dp"
+                        android:visibility="gone"
+                        android:id="@+id/streetType"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="#F4F4F4"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:textSize="14dp"
+                            android:hint="Enter Street Name"
+                            android:paddingLeft="15dp"
+                            android:background="#F4F4F4"
+                            android:id="@+id/streetTyped"
+                            android:layout_height="50dp"
+                            />
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/typeStreetCard"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Type"
+                            android:textStyle="bold"
+
+                            android:id="@+id/typeStreet"
+                            android:textColor="#43A047"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/baseline_location_searching_24"
+                            android:layout_gravity="center"
+                            android:layout_height="15dp"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1.5dp"
+                    android:layout_marginRight="12dp"
+                    android:id="@+id/quickSync"
+                    app:cardBackgroundColor="#EAEAEA"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/baseline_sync_242"
+                        android:layout_height="match_parent"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -734,7 +1003,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
-
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -746,17 +1014,9 @@
                         android:textColor="#222222"
                         android:textSize="12dp"
                         android:layout_width="wrap_content"
-                        android:text="Street"
+                        android:text="Line Number"
                         android:layout_height="wrap_content"/>
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="4dp"
-                        app:cardElevation="-1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="8dp"
-                        app:cardCornerRadius="2dp"
-                        android:alpha="0.9"
-                        app:cardBackgroundColor="#ff0000"
-                        android:layout_height="4dp"/>
+
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -766,31 +1026,23 @@
                     app:cardElevation="2dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     app:cardCornerRadius="10dp"
                     android:layout_marginTop="8dp"
-                    app:cardBackgroundColor="#F4F4F4"
-                    android:layout_marginRight="5dp"
                     android:layout_height="wrap_content">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:layout_width="match_parent"
                         android:textSize="14dp"
                         android:paddingLeft="15dp"
-                        android:id="@+id/street"
+                        android:id="@+id/lineNo"
+                        android:background="#F4F4F4"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:hint="Enter Line Number"
                         android:layout_height="50dp"
                         />
-
-                    <androidx.appcompat.widget.AppCompatImageButton
-                        android:layout_width="match_parent"
-                        android:id="@+id/streetCover"
-                        android:background="#00000000"
-                        android:visibility="gone"
-                        android:layout_height="50dp"/>
-
                 </androidx.cardview.widget.CardView>
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
 
@@ -803,6 +1055,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -932,10 +1185,10 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:textColor="#43A047"
                             android:layout_width="wrap_content"
                             android:text="Capture"
                             android:textStyle="bold"
+                            android:textColor="#43A047"
                             android:layout_gravity="center"
                             android:layout_height="wrap_content"/>
 
@@ -1055,6 +1308,7 @@
                 android:orientation="vertical"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
+                android:id="@+id/all"
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
 
@@ -1063,6 +1317,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:gravity="center"
+
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -1086,7 +1341,7 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="50dp"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:layout_gravity="right"
                         android:id="@+id/add"
                         app:layout_constraintRight_toRightOf="parent"
@@ -1284,7 +1539,7 @@
             android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
-            android:text="Saving"
+            android:text=""
             android:layout_marginTop="40dp"
             android:textColor="#ffffff"
             android:textStyle="bold"
@@ -1296,8 +1551,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/completeCard"
-        android:layout_width="match_parent"
         android:visibility="gone"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardBackgroundColor="#00000000">
 
@@ -1314,7 +1569,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_height="220dp"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="#EDEDED"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -100,7 +100,7 @@
 
                     tools:text="Bungalow"
                     android:maxLines="1"
-                    android:id="@+id/buildingType"
+                    android:id="@+id/tag"
                     android:ellipsize="end"
                     android:layout_width="match_parent"
                     android:layout_marginRight="10dp"
@@ -149,7 +149,7 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:maxLines="1"
                                 android:ellipsize="end"
-                                android:id="@+id/buildingSize"
+                                android:id="@+id/tin"
                                 android:layout_width="match_parent"
                                 android:layout_marginRight="10dp"
                                 tools:text="40 X 40"
@@ -175,7 +175,7 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:maxLines="1"
                                 android:ellipsize="end"
-                                android:id="@+id/phoneNumber"
+                                android:id="@+id/lga"
                                 android:layout_width="match_parent"
                                 android:layout_marginRight="10dp"
                                 tools:text="08133322255"
@@ -200,7 +200,7 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:maxLines="1"
                                 android:ellipsize="end"
-                                android:id="@+id/buildingCategory"
+                                android:id="@+id/area"
                                 android:layout_width="match_parent"
                                 android:layout_marginRight="10dp"
                                 tools:text="Medium sized building"

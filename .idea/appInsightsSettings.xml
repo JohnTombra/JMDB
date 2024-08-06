@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.smartapps.jmdbb" />
+                  <option name="mobileSdkAppId" value="1:457737241124:android:549d299ee643fc8d250eb1" />
+                  <option name="projectId" value="ticket-68b39" />
+                  <option name="projectNumber" value="457737241124" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

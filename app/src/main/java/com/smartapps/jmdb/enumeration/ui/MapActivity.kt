@@ -22,10 +22,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var context: Context
     private var latitude: Double = 0.0
     private var longitude: Double = 0.0
-        //data
-    //zone
-    //zone to login
-    //location shared
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         context = this

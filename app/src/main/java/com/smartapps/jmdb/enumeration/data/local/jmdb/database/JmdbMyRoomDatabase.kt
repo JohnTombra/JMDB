@@ -18,14 +18,18 @@ import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.JmdbStreetDao
 import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.LandPurposeDao
 import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.LandUseDao
 import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.RevenueItemDao
-import com.smartapps.jmdb.enumeration.model.jmdb.Area
-import com.smartapps.jmdb.enumeration.model.jmdb.AssessmentItem
-import com.smartapps.jmdb.enumeration.model.jmdb.BuildingCategory
-import com.smartapps.jmdb.enumeration.model.jmdb.Data
-import com.smartapps.jmdb.enumeration.model.jmdb.Lga
-import com.smartapps.jmdb.enumeration.model.jmdb.State
-import com.smartapps.jmdb.enumeration.model.jmdb.Street
-import  com.smartapps.jmdb.enumeration.model.jmdb.BuildingType
+import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.TagDao
+import com.smartapps.jmdb.enumeration.data.local.jmdb.dao.TimeDao
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Area
+import com.smartapps.jmdb.enumeration.data.model.jmdb.BuildingCategory
+import com.smartapps.jmdb.enumeration.data.model.jmdb.BuildingType
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Data
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Lga
+import com.smartapps.jmdb.enumeration.data.model.jmdb.State
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Street
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Tag
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Time
+
 
 class MyTypeConverter {
    @TypeConverter
@@ -44,37 +48,33 @@ class MyTypeConverter {
          try {
             result.add(n.toInt())
          } catch (e: Exception) {
-
          }
       }
       return result
    }
 }
 
+
+
+
+
 @TypeConverters(MyTypeConverter::class)
-@Database(entities = [Data::class, Street::class, Lga::class, BuildingCategory::class, State::class, Area::class, BuildingType::class, com.smartapps.jmdb.data.model.Result::class, LandPurpose::class, LandUse::class, IdentityType::class], version = 1)
+@Database(entities = [Data::class, Street::class, Lga::class, BuildingCategory::class, State::class, Area::class, BuildingType::class, com.smartapps.jmdb.data.model.Result::class, LandPurpose::class, LandUse::class, IdentityType::class,  Time::class, Tag::class], version = 6)
 abstract class JmdbMyRoomDatabase: RoomDatabase() {
 
+   abstract fun tagDao(): TagDao
+
+   abstract fun timeDao(): TimeDao
    abstract fun buildingDao(): JmdbBuildingDao
 
    abstract fun streetDao(): JmdbStreetDao
-
    abstract fun buildingCategoryDao(): BuildingCategoryDao
-
    abstract fun buildingTypeDao(): BuildingTypeDao
-
    abstract fun areaDao(): JmdbAreaDao
-
    abstract fun lgaDao(): JmdbLgaDao
-
    abstract fun stateDao(): JmdbStateDao
-
    abstract fun revenueItemDao(): RevenueItemDao
-
    abstract fun landPurposeDao(): LandPurposeDao
-
    abstract fun landUseDao(): LandUseDao
-
    abstract fun identityTypeDao(): IdentityTypeDao
-
 }

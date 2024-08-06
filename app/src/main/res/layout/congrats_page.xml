@@ -57,16 +57,16 @@
                     android:layout_marginTop="25dp"
                     android:layout_marginRight="10dp"
                     android:gravity="center"
-                    android:text="Congratulations you have completed\nyour registration"
+                    android:text="Congratulations!\nRegistration completed"
                     android:layout_height="wrap_content"/>
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="70dp"
                     android:layout_marginTop="20dp"
                     android:alpha="0.9"
                     android:src="@drawable/round_verified_24"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="100dp"/>
+                    android:layout_height="70dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -249,7 +249,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:gravity="center"
-                        android:background="#545454"
+                        android:background="#4CAF50"
                         android:textSize="16dp"
                         android:textStyle="bold"
                         android:id="@+id/home"

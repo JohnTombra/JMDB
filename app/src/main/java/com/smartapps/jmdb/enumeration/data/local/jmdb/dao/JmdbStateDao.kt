@@ -1,7 +1,7 @@
 package com.smartapps.jmdb.enumeration.data.local.jmdb.dao
 
 import androidx.room.*
-import com.smartapps.jmdb.enumeration.model.jmdb.State
+import com.smartapps.jmdb.enumeration.data.model.jmdb.State
 import kotlinx.coroutines.flow.Flow
 
 

@@ -17,24 +17,27 @@ import com.novaapps.jmdb.data.model.IdentificationResponse
 import com.novaapps.jmdb.data.model.LandPurposeResponse
 import com.novaapps.jmdb.data.model.LandUseResponse
 import com.novaapps.jmdb.data.model.LgasResponse
+import com.novaapps.jmdb.data.model.StatesResponse
 import com.novaapps.jmdb.data.model.TinVerificationResponse
 import com.smartapps.jmdb.data.model.ABC
+import com.smartapps.jmdb.data.model.MainTinResponse
+import com.smartapps.jmdb.data.model.MyCompany
 import com.smartapps.jmdb.data.model.MyDocument
 import com.smartapps.jmdb.data.model.TinResponse
 import com.smartapps.jmdb.enumeration.registrationdata.model.LoginBody
-import com.smartapps.jmdb.enumeration.model.CountriesResponse
-import com.smartapps.jmdb.enumeration.model.LoginBodyX
-import com.smartapps.jmdb.enumeration.model.LoginResponseX
-import com.smartapps.jmdb.enumeration.model.User
-import com.smartapps.jmdb.enumeration.model.jmdb.AccessmentItemsResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.AreasResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.BuildingCategory
-import com.smartapps.jmdb.enumeration.model.jmdb.BuildingTypeResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.JmdbBuildingPostBody
-import com.smartapps.jmdb.enumeration.model.jmdb.JmdbBuildingPostResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.LgaResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.StatesResponse
-import com.smartapps.jmdb.enumeration.model.jmdb.StreetsResponse
+import com.smartapps.jmdb.enumeration.data.model.CountriesResponse
+import com.smartapps.jmdb.enumeration.data.model.LoginBodyX
+import com.smartapps.jmdb.enumeration.data.model.LoginResponseX
+import com.smartapps.jmdb.enumeration.data.model.User
+import com.smartapps.jmdb.enumeration.data.model.jmdb.AccessmentItemsResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.AreasResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.BuildingCategoriesResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.BuildingTypeResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.JmdbBuildingPostBody
+import com.smartapps.jmdb.enumeration.data.model.jmdb.JmdbBuildingPostResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.LgaResponse
+import com.smartapps.jmdb.enumeration.data.model.jmdb.StreetsResponse
+
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -64,19 +67,21 @@ interface JmdbApiService {
 
 
 
+//http://3.9.45.117/OpenPaymentsApi/validate_tin/23320765908
 
-
-    @GET("http://3.9.45.117/OpenPaymentsApi/validate_phone/{phone}")
-    suspend fun abcPhone(@Path("phone") phone: String): Response<ABC>
-
-
+    //http://3.9.45.117/OpenPaymentsApi/validate_phone/08136759553
 
 
 
 
 
-    @GET("http://3.9.45.117/OpenPaymentsApi/validate_phone/{tin}")
-    suspend fun abcTin(@Path("tin") phone: String): Response<ABC>
+    @GET("api/verify_tin_phone?phone=")
+    suspend fun abcTin(@Query("phone") phone: String): Response<ABC>
+
+
+
+    @GET("http://3.9.45.117/OpenPaymentsApi/validate_tin/{phone}"/*"api/verify_tin_phone?phone="*/)
+    suspend fun abcPhone(@Path("phone") phone: String/*@Query("phone") phone: String*/): Response<ABC/*MainTinResponse*/>
 
 
 
@@ -117,6 +122,14 @@ interface JmdbApiService {
 
 
 
+//https://plateaujmdb.ng/
+    @POST("api/generate_company_tin_psirs")
+    suspend fun generateTin(
+        @Body myCompany: MyCompany
+    ): Response<com.smartapps.jmdb.enumeration.registrationdata.model.LoginResponse>
+
+
+
 
 
     //////
@@ -145,7 +158,7 @@ interface JmdbApiService {
 
 
     @GET("api/fetch_building_categories")
-    suspend fun getBuildingCategories(): Response<com.smartapps.jmdb.enumeration.model.jmdb.BuildingCategoriesResponse>
+    suspend fun getBuildingCategories(): Response<BuildingCategoriesResponse>
 
 
 
@@ -157,7 +170,7 @@ interface JmdbApiService {
 
 
     @GET("api/assessment_items?page=")
-    suspend fun getAssessmentItems(@Query("page") page: Int): Response<AccessmentItemsResponse>
+    suspend fun getAssessmentItems(@Query("page") page: Int): Response<com.smartapps.jmdb.enumeration.data.model.jmdb.AccessmentItemsResponse>
 
 
 

@@ -25,7 +25,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="#ffffff"
-            android:layout_height="420dp">
+            android:layout_height="440dp">
 
 
 
@@ -228,9 +228,9 @@
                     app:cardCornerRadius="15dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="0dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/usernumber"
@@ -250,7 +250,36 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/skip"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:text="Skip"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="#4CAF50"
+                        android:text=">"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="wrap_content"

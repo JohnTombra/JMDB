@@ -3,6 +3,7 @@ package com.smartapps.jmdb.enumeration.ui
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -15,10 +16,8 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.smartapps.jmdb.R
 import com.smartapps.jmdb.databinding.ActivityBuildingsListBinding
+import com.smartapps.jmdb.enumeration.data.model.jmdb.Data
 import com.smartapps.jmdb.enumeration.data.repository.JmdbRepository
-
-import com.smartapps.jmdb.enumeration.model.jmdb.Data
-
 import com.smartapps.jmdb.enumeration.ui.adapters.BuildingAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -49,11 +48,12 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
 
         context = this
 
-        repository = JmdbRepository(this)
+        repository = JmdbRepository
 
         buildings = listOf<Data>()
 
         binding.back.setOnClickListener {
+
             onBackPressed()
         }
 
@@ -61,7 +61,11 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
         binding.notSynced.text = "Not Synced: "+ "..."
 
         binding.ok.setOnClickListener {
-            sync() {}
+            sync() {
+                if(it == 0){
+                    binding.buildingsRecycler.isVisible = false
+                }
+            }
             binding.completeCard.isVisible = false
         }
 
@@ -88,6 +92,12 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
 
 
 
+        binding.cancel.setOnClickListener {
+            JmdbRepository.BLOCK_SYNC = true
+            binding.preparingLayout.isVisible = false
+        }
+
+
         binding.neww.setOnClickListener {
 
             Log.d("Tracker","Clicked")
@@ -102,30 +112,76 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
                             override fun onClick(p0: DialogInterface?, p1: Int) {
                                 if(items == 0){
                                     p0!!.dismiss()
-                                }else{
+                                }else {
+
+
+                                    //TODO do internet check here
+                                    if(isInternetAvailable(context)){
 
                                     //show syncing dialog
-                                    binding.syncingLayout.isVisible = true
-                                    repository.syncAllBuildings({
-                                        CoroutineScope(Dispatchers.Main).launch {
-                                            binding.syncingLayout.isVisible = false
-                                            Toast.makeText(context,it, Toast.LENGTH_SHORT).show()
-                                            binding.completeCard.isVisible = true
-                                            binding.status.text = "Error"
-                                            binding.message.text = it
-                                            binding.statusIndicator.setImageResource(R.drawable.baseline_close_24)
-                                        }
-                                    }){
+                                    binding.preparingLayout.isVisible = true
+                                    binding.preparing.text = "Preparing sync...\n(Strong Internet Required)"
+
+                                    repository.syncMultipleBuildings(
+                                        context,
+                                        listOf(),
+                                        { a, b, c, d ->
+
+                                            CoroutineScope(Dispatchers.Main).launch {
+                                                binding.preparingLayout.isVisible = true
+                                                binding.preparing.text =
+                                                    "Syncing... \n($b out of $a)"
+                                            }
+
+                                        },
+                                        {
+
+                                            CoroutineScope(Dispatchers.Main).launch {
+                                                binding.preparingLayout.isVisible = false
+                                                binding.syncingLayout.isVisible = true
+                                            }
+
+                                        },
+                                        {
+                                            CoroutineScope(Dispatchers.Main).launch {
+                                                binding.preparingLayout.isVisible = false
+                                                binding.syncingLayout.isVisible = false
+                                                Toast.makeText(context, it, Toast.LENGTH_SHORT)
+                                                    .show()
+                                                binding.completeCard.isVisible = true
+                                                binding.status.text = "Error"
+                                                binding.message.text = it
+                                                binding.statusIndicator.setImageResource(R.drawable.baseline_close_24)
+
+
+
+                                            }
+                                        }) { synced ->
                                         CoroutineScope(Dispatchers.Main).launch {
                                             sync() {}
                                             //add synced success dialog
                                             binding.completeCard.isVisible = true
                                             binding.syncingLayout.isVisible = false
+                                            binding.preparingLayout.isVisible = false
                                             binding.status.text = "Success"
-                                            binding.message.text = "Successfully synced $items building${if(items == 1){""}else{"s"}}"
+                                            binding.message.text =
+                                                "Successfully synced $synced building${
+                                                    if (synced == 1) {
+                                                        ""
+                                                    } else {
+                                                        "s"
+                                                    }
+                                                }"
                                             binding.statusIndicator.setImageResource(R.drawable.round_verified_24)
+                                            repository._100Tagifier()
                                         }
                                     }
+
+                                }else{
+                                    Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
+                                }
+
+
                                 }
                             }
                         }).setNegativeButton(if(items == 0){""}else{"Cancel"}, object : DialogInterface.OnClickListener {
@@ -219,12 +275,16 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        sync() {}
+        sync() {
+            if(it == 0){
+                binding.buildingsRecycler.isVisible = false
+            }
+        }
     }
 
 
 
-    private fun sync(callback: () -> Unit) {
+    private fun sync(callback: (Int) -> Unit) {
 
 
 
@@ -242,8 +302,14 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
                     override fun onTick(p0: Long) {
                     }
                     override fun onFinish() {
+
+
                         if (dt.isEmpty()) {
-                            binding.add.isVisible = true}
+                            binding.add.isVisible = true
+                            binding.buildingsRecycler.isVisible = false
+                        }
+
+
                         binding.progress.isVisible = false
 
 
@@ -251,17 +317,24 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
                             CoroutineScope(Dispatchers.Main).launch {
                                 binding.synced.text = "Synced: ${total - syncable}"
                                 binding.notSynced.text = "Not Synced: "+ syncable.toString()
+
+
+                                if (s) {
+                                    s = false
+                                    callback(syncable)
+                                }
                             }
+
+
                         }
 
-                        if (s) {
-                            s = false
-                            callback()
-                        }
+
 
                         //success
                         if (it.isEmpty()) {
-
+                            binding.buildingsRecycler.isVisible = false
+                            //  binding.add.isVisible = false
+                            buildingAdapter.submitList(emptyList())
 //                binding.searchBar.isEnabled = false
 //                binding.searchBar.setText("BUILDINGS")
                         } else {
@@ -298,6 +371,25 @@ class JmdbBuildingsListActivity : AppCompatActivity() {
         binding.optionsLayout.isVisible = false
         i = 0
         binding.optionImage.setImageResource(R.drawable.baseline_keyboard_arrow_up_24)
+
+    }
+
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
+
+
+    fun isInternetAvailable(context: Context): Boolean{
+
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+
+        return networkCapabilities != null
+
+
 
     }
 
