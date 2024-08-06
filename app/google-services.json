@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "457737241124",
+    "firebase_url": "https://ticket-68b39-default-rtdb.firebaseio.com",
+    "project_id": "ticket-68b39",
+    "storage_bucket": "ticket-68b39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457737241124:android:363f49e06f14d98d250eb1",
+        "android_client_info": {
+          "package_name": "com.example.slk20r.zkfinger10demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDercCUxCFNpSB6HHsuvZWCxwnznaY-WXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457737241124:android:c0263369fdd2a004250eb1",
+        "android_client_info": {
+          "package_name": "com.smartapps.facecapture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDercCUxCFNpSB6HHsuvZWCxwnznaY-WXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457737241124:android:549d299ee643fc8d250eb1",
+        "android_client_info": {
+          "package_name": "com.smartapps.jmdbb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDercCUxCFNpSB6HHsuvZWCxwnznaY-WXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457737241124:android:18f0e1b58ba72f99250eb1",
+        "android_client_info": {
+          "package_name": "com.tombra.ticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDercCUxCFNpSB6HHsuvZWCxwnznaY-WXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457737241124-cnkadqte0n0a9q36m2uf10l8l6k3u76i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
