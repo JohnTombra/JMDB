@@ -1221,7 +1221,7 @@ object JmdbRepository {//hah
 
                     val respObj = gson.fromJson(body, LoginMessage::class.java)
 
-                    if (respObj.message != "error") {
+                    if (respObj.message != "error" && respObj.message != "validation error") {
 
                         val respObj = gson.fromJson(body, LoginResponse::class.java)
 
