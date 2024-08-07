@@ -133,7 +133,7 @@ object JmdbRepository {//hah
 
     fun initilizeRoom(context:Context){
          room = Room.databaseBuilder(context, JmdbMyRoomDatabase::class.java, "my-room_db")
-            .fallbackToDestructiveMigration().build()
+            /*.fallbackToDestructiveMigration()*/.build()
     }
 
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient

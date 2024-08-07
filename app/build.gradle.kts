@@ -12,7 +12,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.smartapps.jmdbb"//"com.smartapps.jmdb"
+        applicationId = "com.smartapps.jmdb"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
